@@ -1,0 +1,151 @@
+.card-header{
+    background-color: grey;
+}
+#hd{
+    color: white;
+}
+.vr {
+    width:3px;
+    background-color:grey;
+    // position:absolute;
+    top:0;
+    bottom:0;
+    left:150px;
+}
+.tab-content > .active{
+    padding: 2%;
+}
+
+nav > .nav.nav-tabs{
+
+    border: none;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+  
+  }
+  nav > div a.nav-item.nav-link,
+  nav > div a.nav-item.nav-link.active
+  {
+    border: none;
+      padding: 18px 25px;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+  }
+  
+  nav > div a.nav-item.nav-link.active:after
+   {
+    content: "";
+    position: relative;
+    bottom: -60px;
+    left: -10%;
+    border: 15px solid transparent;
+    border-top-color: #7889e8 ;
+  }
+  .tab-content{
+    background: #fdfdfd;
+      line-height: 25px;
+      border: 1px solid #ddd;
+      border-top:5px solid #7889e8;
+      border-bottom:5px solid #7889e8;
+      padding:30px 25px 30px 25px;
+      min-width: 940px;
+  }
+  
+  nav > div a.nav-item.nav-link:hover,
+  nav > div a.nav-item.nav-link:focus
+  {
+    border: none;
+      background: #7889e8;
+      color:#fff;
+      border-radius:0;
+      transition:background 0.20s linear;
+  }
+  #sel{
+      min-width: 900px!important;
+  }
+
+  #bs1,#bs2{
+      min-width: 400px!important;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+
+  //Chat
+
+  #odate{
+    margin-left: 22px!important;
+    }
+    
+    /* Chat containers */
+  
+      
+      /* Darker chat container */
+      .darker {
+        border-color: #ccc;
+        background-color: #ddd;
+      }
+      
+      /* Clear floats */
+      .container::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      /* Style images */
+      .container img {
+        float: left;
+        max-width: 30px;
+        width: 100%;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+      
+      /* Style the right image */
+      .container img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right:0;
+      }
+      
+      /* Style time text */
+      .time-right {
+        float: right;
+        color: #aaa;
+      }
+      
+      /* Style time text */
+      .time-left {
+        float: left;
+        color: #999;
+      }
+      
+.img-responsive{
+    margin: 20px auto;
+max-width: 200px;
+max-height: 200px;
+}
+
+.vl {
+    border-left: 1  px solid grey;
+    height: 500px;
+  }
+  purchase-wrapper .post {
+    width: 100%;
+    box-shadow: 0 1px 1px 1px rgba(207,207,207,.2);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
