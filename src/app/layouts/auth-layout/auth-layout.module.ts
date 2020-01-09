@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthLayoutRoutes } from './auth-layout.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DboostingComponent } from '../../pages/dboosting/dboosting.component';
 
 import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
+import {AuthService} from '../../services/auth.service'
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { RegisterComponent } from '../../pages/register/register.component';
   declarations: [
     LoginComponent,
     RegisterComponent,
-    
-  ]
+    DboostingComponent
+  ],
+  providers:[AuthService]
 })
 export class AuthLayoutModule { }
