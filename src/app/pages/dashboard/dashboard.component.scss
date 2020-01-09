@@ -50,7 +50,7 @@ nav > .nav.nav-tabs{
       border-top:5px solid #7889e8;
       border-bottom:5px solid #7889e8;
       padding:30px 25px 30px 25px;
-      min-width: 940px;
+      // min-width: 940px;
   }
   
   nav > div a.nav-item.nav-link:hover,
@@ -74,7 +74,8 @@ nav > .nav.nav-tabs{
     vertical-align: middle;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    margin: 1px;
+    // border-radius: 50%;
   }
 
 
@@ -127,4 +128,5 @@ nav > .nav.nav-tabs{
         float: left;
         color: #999;
       }
+      
       
