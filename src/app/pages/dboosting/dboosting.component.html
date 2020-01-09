@@ -2,95 +2,7 @@
   <div class="container-fluid">
       
     <div class="header-body">
-      <!-- Card stats -->
-      <!-- <div class="row">
-        <div class="col-xl-3 col-lg-6">
-          <div class="card card-stats mb-4 mb-xl-0">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
-                  <span class="h2 font-weight-bold mb-0">350,897</span>
-                </div>
-                <div class="col-auto">
-                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                    <i class="fas fa-chart-bar"></i>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3 mb-0 text-muted text-sm">
-                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                <span class="text-nowrap">Since last month</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-          <div class="card card-stats mb-4 mb-xl-0">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                  <span class="h2 font-weight-bold mb-0">2,356</span>
-                </div>
-                <div class="col-auto">
-                  <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                    <i class="fas fa-chart-pie"></i>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3 mb-0 text-muted text-sm">
-                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
-                <span class="text-nowrap">Since last week</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-          <div class="card card-stats mb-4 mb-xl-0">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
-                  <span class="h2 font-weight-bold mb-0">924</span>
-                </div>
-                <div class="col-auto">
-                  <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                    <i class="fas fa-users"></i>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3 mb-0 text-muted text-sm">
-                <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                <span class="text-nowrap">Since yesterday</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-          <div class="card card-stats mb-4 mb-xl-0">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                  <span class="h2 font-weight-bold mb-0">49,65%</span>
-                </div>
-                <div class="col-auto">
-                  <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                    <i class="fas fa-percent"></i>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3 mb-0 text-muted text-sm">
-                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                <span class="text-nowrap">Since last month</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+ 
   <div class="row">
       <div class="col-xl-3 col-lg-6">
 </div>
@@ -108,7 +20,7 @@
 
 <div class="container-fluid">
 
-<div style="text-align: center;" class="h1">
+<div  class="h1">
 Boost Purchase
 
 </div>
@@ -119,11 +31,12 @@ Boost Purchase
 </div>
 </div>
 
+<!--working section starts here-->
 
 <div class="card">
 <div class="card-body">
-    <div class="row">
-        <div class="col-xs-12 ">
+    <div class="row ">
+        <div class="col-xs-12 col-md-12">
           <nav>
             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="ni ni-app text-orange"></i>Division Boost</a>
@@ -137,43 +50,50 @@ Boost Purchase
 
             </div>
           </nav>
+
+
+
           <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="imageDiv col-xs-3 col-md-3">
                   <h4 style="text-align: center;">Current Rank</h4>
                   <br>
-                  <img src="../assets/img/theme/bos1.png" class="img-responsive">
-<br>
-<section style="text-align: center;width: 170px;">
-    <select class="input-medium"><option value="5">
+                  <div class="imageDiv">
+                  <img [src]="currentImage.url" class="img-responsive">
+                </div>
+<div class="desiredSections">
+  <section class="currentRank">
+    <select class="input-medium" [(ngModel)]="selectedRank" (change)="selectRank()" >
+      <option value="Diamond">
         Diamond
-    </option><option value="4">
+    </option><option value="Platinum">
         Platinum
-    </option><option value="3">
+    </option><option value="Gold">
         Gold
-    </option><option value="2">
+    </option><option value="Silver">
         Silver
-    </option><option value="1">
+    </option><option value="Bronze">
         Bronze
-    </option><option value="0">
+    </option><option value="Iron">
         Iron
     </option></select>
 </section>
 <br>
-<section style="text-align: center;width: 170px;">
-    <select class="input-medium"><option value="5">
+<section class="currentRank">
+    <select class="input-medium" [(ngModel)]="selectedDivision" (change)="selectRank()" > 
+      <option value="1">
         Division I
-    </option><option value="4">
+    </option><option value="2">
         Division II
     </option><option value="3">
         Division III
-    </option><option value="2">
+    </option><option value="4">
         Division IV
    </select>
 </section>
              <br>
-             <section style="text-align: center;width: 170px;">
+             <section class="currentRank">
                 <select class="input-medium"><option value="5">
                     0-20 LP
                 </option><option value="4">
@@ -186,52 +106,64 @@ Boost Purchase
                     81-100 LP
                 </select>
             </section>
-                         
+          </div>
+
                 </div>
-                <div  class="col-md-3">
-                    <h4 style="float: right;">Desired Rank</h4>
+                <div  class="imageDiv col-md-3 col-xs-3">
+                    <h4 >Desired Rank</h4>
                     <br>
-                    <br>
-                    <img style="float: right;     margin-right: -58px;
-                    " src="../assets/img/theme/bos1.png" class="img-responsive">
-<br>
-<br>
-<section style="float:right;margin-right: -58px;width: 170px;">
-    <select class="input-medium"><option value="5">
+                    
+                    <div class="imageDiv">
+                  
+                    <img      
+                    [src]="desiredImage.url" class="desiredImage">
+                    </div>
+                    <div class="desiredSections">
+
+<section >
+    <select class="input-medium" [(ngModel)]="desiredRank" (change)="selectDesiredRank()" >
+        <option value="Master">
+            Master
+        </option>
+      <option value="Diamond" >
         Diamond
-    </option><option value="4">
+    </option>
+    <option value="Platinum" >
         Platinum
-    </option><option value="3">
+    </option><option value="Gold" >
         Gold
-    </option><option value="2">
+    </option><option value="Silver" >
         Silver
-    </option><option value="1">
+    </option><option value="Bronze" >
         Bronze
-    </option><option value="0">
+    </option><option value="Iron" >
         Iron
     </option></select>
 </section>
 <br>
 
-<section style="float: right;margin-right: -58px;width: 170px;margin-top: 12%;">
-    <select class="input-medium"><option value="5">
+<section >
+    <select class="input-medium" [(ngModel)]="desiredDivision" (change)="selectDesiredRank()">
+      <option value="1">
         Division I
-    </option><option value="4">
+    </option><option value="2">
         Division II
     </option><option value="3">
         Division III
-    </option><option value="2">
+    </option><option value="4">
         Division IV
    </select>
 </section>
+</div>
+
 
                  </div>
               
-<div class="col-md-1">
+<div class="col-md-1 col-xs-1">
     <div style="float: right;" class="vl"></div>
 </div>
 
-                 <div  class="col-md-5">
+                 <div  class="col-md-5 col-xs-5">
         
                     <h3>Your Order</h3>
 
@@ -274,7 +206,7 @@ Boost Purchase
               
               <section>
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-12 col-xs-12">
                       <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                       <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                       <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -297,7 +229,7 @@ Boost Purchase
               
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-xs-12">
                         <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                         <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                         <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -320,7 +252,7 @@ Boost Purchase
                 
                   </div>
                   <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-12 col-xs-12">
                           <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                           <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                           <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -343,7 +275,7 @@ Boost Purchase
                   
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-xs-12">
                             <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                             <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                             <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -366,7 +298,7 @@ Boost Purchase
                     
                       </div>
                       <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-12 col-xs-12">
                               <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                               <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                               <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -389,7 +321,7 @@ Boost Purchase
                       
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-xs-12">
                                 <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                                 <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                                 <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -410,7 +342,7 @@ Boost Purchase
               <br>
               <p style="color: grey;"> <strong>Lorem Ipsum </strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
               <br><div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-12 col-xs-12">
                       <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
                       <img src="../assets/img/theme/team-1-800x800.jpg" alt="Avatar" class="avatar">
                       <img src="../assets/img/theme/team-2-800x800.jpg" alt="Avatar" class="avatar">
@@ -436,31 +368,31 @@ Boost Purchase
                   <br>
                   <div class="row">
 
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-2">
                         <label class="checkbox">
                             <input checked="checked" name="roles[]" type="checkbox" value="top">
                             <i></i>&nbsp; Top
                             </label>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-2">
                             <label class="checkbox">
                             <input name="roles[]" type="checkbox" value="jungle">
                             <i></i>&nbsp; Jungle
                              </label>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-2">
                             <label class="checkbox">
                             <input checked="checked" name="roles[]" type="checkbox" value="mid">
                             <i></i>&nbsp; Mid
                             </label>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-2">
                             <label class="checkbox">
                             <input name="roles[]" type="checkbox" value="support">
                             <i></i>&nbsp; Support
                             </label>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-2">
                             <label class="checkbox">
                             <input name="roles[]" type="checkbox" value="bot">
                             <i></i>&nbsp; Bot
@@ -477,7 +409,7 @@ Boost Purchase
                   <hr style="border:1px dotted;color: grey;">
                   <br>
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-6">
                       <section style="float: left;">
                           <label class="checkbox">
                               <input name="roles[]" type="checkbox" value="bot">
@@ -486,7 +418,7 @@ Boost Purchase
                       
                       </section>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6 col-xs-6"></div>
 
                   </div>
 
@@ -499,7 +431,7 @@ Boost Purchase
                     <br>
                     <div class="row">
               
-                      <div class="col-md-12">
+                      <div class="col-md-12 col-xs-12">
                         <section style="margin-bottom: 15px;
                         position: relative;
                     ">
@@ -543,7 +475,7 @@ Boost Purchase
                     </button>
                 </div>
                 <div class="row">
-<div class="col-md-6">
+<div class="col-md-6 col-xs-6">
 <section>
     <label class="select">
         <select id="bs1" name="booster"><option value="0"></option><option value="45">Booster</option></select>
@@ -556,7 +488,7 @@ Boost Purchase
 
 
 
-<div style="float: right;" class="col-md-6">
+<div style="float: right;" class="col-md-6 col-xs-6">
   <section>
 
       <label class="select">
@@ -577,10 +509,14 @@ Boost Purchase
 </div>
 
 </div>
+
+
+<!--working section ends here-->
+
 <br>
 <h1>Promotional code</h1>
 <br>
-<div style="background-color: aliceblue;height: 70px;" class="post"><div class="row promotional-code"><div class="col-sm-12 col-md-6 col-lg-3"><div class="input-group"><input type="text" placeholder="Promotional Code" class="form-control"> <span class="input-group-btn"><button type="submit" class="btn btn-primary">Apply</button></span></div></div> <div class="col-md-6 message"><span>Enter code to get discount for your purchase.</span></div></div></div>
+<div style="background-color: aliceblue;height: 70px;" class="post"><div class="row promotional-code"><div class="col-xs-12 col-md-6 col-lg-3"><div class="input-group"><input type="text" placeholder="Promotional Code" class="form-control"> <span class="input-group-btn"><button type="submit" class="btn btn-primary">Apply</button></span></div></div> <div class="col-md-6 message"><span>Enter code to get discount for your purchase.</span></div></div></div>
 
 </div>
 <br>

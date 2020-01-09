@@ -4,6 +4,15 @@
 #hd{
     color: white;
 }
+.h1{
+  text-align: center!important;
+}
+
+.currentRank{
+  // text-align: center;width: 170px
+}
+
+
 .vr {
     width:3px;
     background-color:grey;
@@ -128,9 +137,17 @@ nav > .nav.nav-tabs{
         color: #999;
       }
       
+.imageDiv{
+  text-align: center;
+}
+
 .img-responsive{
-    margin: 20px auto;
+    // margin: 20px auto;
 max-width: 200px;
+max-height: 200px;
+}
+.desiredImage{
+  max-width: 200px;
 max-height: 200px;
 }
 
@@ -148,4 +165,17 @@ max-height: 200px;
     position: relative;
     display: inline-block;
     margin-bottom: 40px;
+}
+
+.desiredSections{
+  padding: 2%;
+  text-align: center !important;
+}
+
+.testingClas{
+  float:right;margin-right: -58px;width: 170px
+
+  // float: right;margin-right: -58px;width: 170px;margin-top: 12%;
+
+
 }
