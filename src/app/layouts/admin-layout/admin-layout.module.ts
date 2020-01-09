@@ -54,7 +54,6 @@ import { DqueueComponent } from '../../pages/dqueue/dqueue.component';
     NewsComponent,
     WithdrawComponent,
     PurchasesComponent,
-    DboostingComponent,
     CoachingComponent,
     DqueueComponent
   ]

@@ -31,7 +31,7 @@ export const AdminLayoutRoutes: Routes = [
         { path: 'news',           component: NewsComponent },
         { path: 'withdraw',           component: WithdrawComponent },
         { path: 'purchases',           component: PurchasesComponent },
-        { path: 'dboosting',           component: DboostingComponent },
+        // { path: 'dboosting',           component: DboostingComponent },
         { path: 'coaching',           component: CoachingComponent },
         { path: 'dqueue',           component: DqueueComponent },
 
